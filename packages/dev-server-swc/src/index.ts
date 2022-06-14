@@ -1,0 +1,1 @@
+export { swcPlugin } from './swcPluginFactory';
