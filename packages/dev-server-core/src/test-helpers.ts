@@ -3,10 +3,10 @@ import { expect } from 'chai';
 import { green, red, yellow } from 'nanocolors';
 import fetch, { RequestInit } from 'node-fetch';
 
-import { DevServer } from './server/DevServer';
-import { DevServerCoreConfig } from './server/DevServerCoreConfig';
-import { Logger } from './logger/Logger';
-import { Plugin } from './plugins/Plugin';
+import { DevServer } from './server/DevServer.js';
+import { DevServerCoreConfig } from './server/DevServerCoreConfig.js';
+import { Logger } from './logger/Logger.js';
+import { Plugin } from './plugins/Plugin.js';
 
 const defaultConfig: Omit<DevServerCoreConfig, 'port' | 'rootDir'> = {
   hostname: 'localhost',
