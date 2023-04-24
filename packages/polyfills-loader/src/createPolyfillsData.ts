@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import Terser from 'terser';
+import * as Terser from 'terser';
 import { PolyfillsLoaderConfig, PolyfillConfig, PolyfillFile } from './types.js';
 import { createContentHash, noModuleSupportTest, hasFileOfType, fileTypes } from './utils.js';
 
