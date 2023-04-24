@@ -6,7 +6,7 @@
     "sourceMap": true,
     "downlevelIteration": true,
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "typeRoots": ["@types", "./types"],
     "types": ["node", "mocha", "chai"],
     "allowSyntheticDefaultImports": true,
