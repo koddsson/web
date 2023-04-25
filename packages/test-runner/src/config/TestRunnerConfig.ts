@@ -1,5 +1,5 @@
 import { TestFramework, TestRunnerCoreConfig, TestRunnerGroupConfig } from '@web/test-runner-core';
-import { RollupNodeResolveOptions } from '@web/dev-server';
+import { RollupNodeResolveOptions } from '@web/dev-server-rollup';
 
 export interface TestRunnerConfig extends Omit<TestRunnerCoreConfig, 'testFramework'> {
   groups?: string | string[] | TestRunnerGroupConfig[];
