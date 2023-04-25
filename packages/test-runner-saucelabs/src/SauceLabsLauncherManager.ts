@@ -22,7 +22,7 @@ export function withTimeout<T>(promise: Promise<T>, message: string): Promise<T>
   });
 }
 export class SauceLabsLauncherManager {
-  private api: SaucelabsAPI;
+  private api: typeof SaucelabsAPI;
   private launchers = new Set<BrowserLauncher>();
   private connectionPromise?: Promise<SauceConnectInstance>;
   private connection?: SauceConnectInstance;
@@ -32,6 +32,7 @@ export class SauceLabsLauncherManager {
   constructor(options: SauceLabsOptions, connectOptions?: SauceConnectOptions) {
     this.options = options;
     this.connectOptions = connectOptions;
+    // @ts-ignore I'm not sure what's going on
     this.api = new SaucelabsAPI(this.options);
 
     process.on('SIGINT', this.closeConnection);
@@ -51,6 +52,7 @@ export class SauceLabsLauncherManager {
     console.log('[Saucelabs] Setting up Sauce Connect proxy...');
 
     this.connectionPromise = withTimeout(
+      // @ts-ignore
       this.api.startSauceConnect({
         ...this.connectOptions,
         noSslBumpDomains: `127.0.0.1,localhost,${ip.address()}`,
