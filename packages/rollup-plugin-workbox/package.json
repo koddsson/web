@@ -15,10 +15,12 @@
   },
   "main": "dist/index.js",
   "module": "index.mjs",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./index.d.ts"
     }
   },
   "scripts": {

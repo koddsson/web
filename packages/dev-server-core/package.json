@@ -18,14 +18,17 @@
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./dist/dom5": {
-      "require": "./dist/dom5/index.js"
+      "require": "./dist/dom5/index.js",
+      "types": "./dist/dom5/index.d.ts"
     },
     "./test-helpers": {
       "import": "./test-helpers.mjs",
-      "require": "./dist/test-helpers.js"
+      "require": "./dist/test-helpers.js",
+      "types": "./dist/test-helpers.d.ts"
     }
   },
   "engines": {

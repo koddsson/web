@@ -18,10 +18,12 @@
     "web-dev-server": "./dist/bin.js",
     "wds": "./dist/bin.js"
   },
+  "type": "module",
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "engines": {
