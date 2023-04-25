@@ -6,7 +6,7 @@ import { Profiler } from 'inspector';
 import picoMatch from 'picomatch';
 import LruCache from 'lru-cache';
 
-import { toFilePath } from './utils';
+import { toFilePath } from './utils.js';
 
 type V8Coverage = Profiler.ScriptCoverage;
 type Matcher = (test: string) => boolean;

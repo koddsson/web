@@ -2,8 +2,8 @@ import { EntrypointBundle } from '@web/rollup-plugin-html';
 import { PolyfillsLoaderConfig, FileType, fileTypes } from '@web/polyfills-loader';
 import { ModuleFormat } from 'rollup';
 
-import { RollupPluginPolyfillsLoaderConfig } from './types';
-import { createError } from './utils';
+import { RollupPluginPolyfillsLoaderConfig } from './types.js';
+import { createError } from './utils.js';
 
 export function formatToFileType(format: ModuleFormat) {
   switch (format) {

@@ -1,14 +1,13 @@
-import { MapStackLocation, parseStackTrace } from '@web/browser-logs';
-import { MapBrowserUrl } from '@web/browser-logs/src/parseStackTrace';
+import { MapStackLocation, parseStackTrace, MapBrowserUrl } from '@web/browser-logs';
 
-import { TestRunnerCoreConfig } from '../../../config/TestRunnerCoreConfig';
+import { TestRunnerCoreConfig } from '../../../config/TestRunnerCoreConfig.js';
 import {
   TestResult,
   TestResultError,
   TestSession,
   TestSuiteResult,
-} from '../../../test-session/TestSession';
-import { forEachAsync } from '../../../utils/async';
+} from '../../../test-session/TestSession.js';
+import { forEachAsync } from '../../../utils/async.js';
 
 export async function replaceErrorStack(
   error: TestResultError,
