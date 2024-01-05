@@ -4,12 +4,15 @@ import { FSWatcher } from 'chokidar';
 import httpServer, { IncomingMessage, ServerResponse } from 'http';
 import http2Server from 'http2';
 import fs from 'fs';
+import { fileURLToPath } from 'node:url';
 import net, { Server, Socket, ListenOptions } from 'net';
 
 import { DevServerCoreConfig } from './DevServerCoreConfig.js';
 import { createMiddleware } from './createMiddleware.js';
 import { Logger } from '../logger/Logger.js';
 import { addPlugins } from './addPlugins.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * A request handler that returns a 301 HTTP Redirect to the same location as the original

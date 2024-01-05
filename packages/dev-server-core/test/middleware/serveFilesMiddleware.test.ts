@@ -1,7 +1,10 @@
 import { expect } from 'chai';
 import path from 'path';
+import { fileURLToPath } from 'node:url';
 
 import { createTestServer } from '../helpers.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe('serveFilesMiddleware', () => {
   it('can serve files outside of the root directory', async () => {

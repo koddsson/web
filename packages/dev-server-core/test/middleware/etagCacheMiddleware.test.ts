@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url';
+
 import { expect } from 'chai';
 import path from 'path';
 import fs from 'fs';
@@ -5,6 +7,8 @@ import { nanoid } from 'nanoid';
 
 import { createTestServer, timeout } from '../helpers.js';
 import { DevServer } from '../../src/server/DevServer.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const fixtureDir = path.resolve(__dirname, '..', 'fixtures', 'basic');
 const testFileAName = '/cached-file-a.js';

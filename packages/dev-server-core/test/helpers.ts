@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import path from 'path';
 import {
   createTestServer as originalCreateTestServer,
@@ -7,6 +8,8 @@ import {
   virtualFilesPlugin,
 } from '../src/test-helpers.js';
 import { DevServerCoreConfig } from '../src/server/DevServerCoreConfig.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export function createTestServer(config: Partial<DevServerCoreConfig> = {}) {
   return originalCreateTestServer({

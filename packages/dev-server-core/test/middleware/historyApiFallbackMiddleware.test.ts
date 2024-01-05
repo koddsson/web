@@ -3,6 +3,9 @@ import path from 'path';
 
 import { createTestServer } from '../helpers.js';
 import { DevServer } from '../../src/server/DevServer.js';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe('history api fallback middleware', () => {
   describe('index in root', () => {
