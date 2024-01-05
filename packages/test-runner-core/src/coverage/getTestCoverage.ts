@@ -1,5 +1,8 @@
-import {
+import pkg from 'istanbul-lib-coverage';
+const {
   createCoverageMap,
+} = pkg;
+import type {
   CoverageSummaryData,
   CoverageMap,
   CoverageMapData,

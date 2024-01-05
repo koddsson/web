@@ -1,3 +1,6 @@
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import * as hanbi from 'hanbi';
 import { expect } from 'chai';
 import portfinder from 'portfinder';
@@ -9,6 +12,8 @@ import { TestRunner } from '../../../src/runner/TestRunner.js';
 import { Logger } from '../../../src/logger/Logger.js';
 import { SESSION_STATUS } from '../../../src/test-session/TestSessionStatus.js';
 import { TestRunnerGroupConfig } from '../../../src/index.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 interface BrowserStubs {
   stop: hanbi.Stub<Exclude<BrowserLauncher['stop'], undefined>>;
