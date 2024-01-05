@@ -43,5 +43,10 @@
     "terminal",
     "console",
     "CLI"
-  ]
+  ],
+  "mocha": {
+    "loader": "ts-node/esm",
+    "exit": true,
+    "retries": 3
+  }
 }

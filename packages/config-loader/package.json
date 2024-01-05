@@ -45,5 +45,10 @@
       "import": "./index.mjs",
       "require": "./src/index.js"
     }
+  },
+  "mocha": {
+    "loader": "ts-node/esm",
+    "exit": true,
+    "retries": 3
   }
 }
